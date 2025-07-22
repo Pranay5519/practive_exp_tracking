@@ -23,7 +23,7 @@ X_test = test_data['content'].values
 y_test = test_data['sentiment'].values
 
 # Apply Bag of Words (CountVectorizer)
-vectorizer = TfidfVectorizer(max_features=max_features)
+vectorizer = CountVectorizer(max_features=max_features)
 
 # Fit the vectorizer on the training data and transform it
 X_train_bow = vectorizer.fit_transform(X_train)
@@ -44,5 +44,5 @@ data_path = os.path.join("data","interim")
 
 os.makedirs(data_path)
 
-train_df.to_csv(os.path.join(data_path,"train_tfidf.csv"))
-test_df.to_csv(os.path.join(data_path,"test_tfidf.csv"))
+train_df.to_csv(os.path.join(data_path,"train_bow.csv"))
+test_df.to_csv(os.path.join(data_path,"test_bow.csv"))

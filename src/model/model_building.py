@@ -12,7 +12,7 @@ n_estimators   = params["model_building"]["n_estimators"]
 learning_rate  = params["model_building"]["learning_rate"]
 print(n_estimators, learning_rate)
 # fetch the data from data/processed
-train_data = pd.read_csv('./data/interim/train_tfidf.csv')
+train_data = pd.read_csv('./data/interim/train_bow.csv')
 
 X_train = train_data.iloc[:,0:-1].values
 y_train = train_data.iloc[:,-1].values
